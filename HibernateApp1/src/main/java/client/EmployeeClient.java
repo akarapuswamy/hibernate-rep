@@ -15,10 +15,9 @@ public class EmployeeClient {
 		SessionFactory sess = con.buildSessionFactory();
 		Session session = sess.openSession();
 		Transaction tx = session.beginTransaction();
-		session.save(e1);
+		session.merge(e1);
 		tx.commit();
 		sess.close();
-		
 		
 	}
 }
